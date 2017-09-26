@@ -1,0 +1,11 @@
+
+<!--wxml 是编写小程序的骨架  -->
+<!--<div>  -->
+<view class="container">
+  <image class="pic" src="/images/avatar/3.png"></image>
+  <text class="user-name">hello,戚培俊</text>
+
+  <view class="moto-container" bindtap='go_post'>
+    <text class="moto">开启小程序之旅</text>
+  </view>
+</view>

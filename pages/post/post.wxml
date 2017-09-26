@@ -1,0 +1,31 @@
+<!--pages/post/post.wxml-->
+ <!-- <scroll-view scroll-y="true" class='scroll'>  -->
+
+<import src="post-item/post-item.wxml" />
+
+  <view style='padding-bottom:400rpx'>
+    <swiper indicator-dots='{{true}}' autoplay='{{true}}' interval='5000'>
+      <swiper-item>
+        <image src='/images/wx.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='/images/vr.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='/images/iqiyi.png'></image>
+      </swiper-item>
+    </swiper>
+
+    <!-- // template   -->
+    <!--数据传递  <template is="postItem" data="{{data}}"></template>  -->
+    <block wx:for="{{10}}" wx:key="*this">
+    <view catchtap="go_post_detail" data-id="{{item}}">
+      <template is="postItem"></template>
+    </view>
+      
+    </block>
+  </view>
+
+  <!-- </scroll-view>   -->
+
+ 

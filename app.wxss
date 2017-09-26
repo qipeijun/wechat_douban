@@ -1,0 +1,6 @@
+
+text{
+  font-family: "Microsoft yahei";
+  font-size: 24rpx;
+  color: #666;
+}
