@@ -12,7 +12,7 @@ Page({
     api_soon:{},
     api_top:{},
   },
-  // 7-16 
+  //  
 
   /**
    * 生命周期函数--监听页面加载
@@ -36,6 +36,11 @@ Page({
       that.processDoubanData(res.data, "api_top")
     });
   },
+  onMoreTap(e){  //更多
+    wx.navigateTo({
+      url: `more-movie/more-movie?category=${e.currentTarget.dataset.category}`,
+    })
+  },
   get_in_theaters(url,api) {
    return new Promise(function(resolve,reject){
      wx.request({
@@ -54,7 +59,6 @@ Page({
        },
      })
    })
-    
   },
   processDoubanData:function(moviesDouban,msg){
     var movies = [];
